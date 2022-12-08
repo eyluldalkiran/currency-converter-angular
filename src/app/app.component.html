@@ -1,0 +1,49 @@
+<div class="content">
+  <div class="header">
+    <div class="left">
+      <h1>Currency Converter by Eylül Dalkıran</h1>
+    </div>
+    <div class="right">
+      <a href="" target="_blank"><i class="fa fa-github fa-lg"></i></a>
+      <a href="" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+      <a href="" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+      <a href="" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
+    </div>
+  </div>
+  <div class="main">
+    <div class="profile">
+      <h1>
+        <strong>Angular Currency Converter</strong>
+      </h1>
+    </div>
+    <div class="converter">
+      <input (keyup)="eventInput($event)" [(ngModel)]="baseValue" type="text" />
+      <div class="changer">
+        <select (change)="eventSelect($event)" [(ngModel)]="baseCurrency">
+          <option value="TRY">TRY</option>
+        </select>
+        <i class="fa fa-exchange" aria-hidden="true"></i>
+        <select (change)="eventSelect($event)" [(ngModel)]="convertCurrency">
+          <option value="USD">USD</option>
+          <option value="GBP">GBP</option>
+          <option value="EUR">EUR</option>
+          <option value="AUD">AUD</option>
+          <option value="DKK">DKK</option>
+          <option value="CHF">CHF</option>
+          <option value="SEK">SEK</option>
+          <option value="CAD">CAD</option>
+          <option value="KWD">KWD</option>
+          <option value="NOK">NOK</option>
+          <option value="SAR">SAR</option>
+        </select>
+      </div>
+      <input
+        disabled
+        [(ngModel)]="convertedValue"
+        style="margin-top: 20px; margin-bottom: 0"
+        type="text"
+      />
+    </div>
+  </div>
+  <div class="footer"></div>
+</div>
